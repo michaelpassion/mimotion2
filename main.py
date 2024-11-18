@@ -219,10 +219,16 @@ def main(_user, _passwd, min_1, max_1):
 
 
 # 获取时间戳
-def get_time():
-    url = 'http://worldtimeapi.org/api/timezone/Asia/Shanghai'
-    response = requests.get(url, headers=headers).json()
-    t = str(response['unixtime'])+'000'
+# def get_time():
+#     url = 'http://worldtimeapi.org/api/timezone/Asia/Shanghai'
+#     response = requests.get(url, headers=headers).json()
+#     t = str(response['unixtime'])+'000'
+#     return t
+    
+def get_time(self):
+    url = "https://f.m.suning.com/api/ct.do"
+    response = requests.get(url, headers=self.headers).json()
+    t = response["currentTime"]
     return t
 
 
