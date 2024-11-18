@@ -227,7 +227,7 @@ def main(_user, _passwd, min_1, max_1):
     
 def get_time():
     url = "https://f.m.suning.com/api/ct.do"
-    response = requests.get(url, headers=self.headers).json()
+    response = requests.get(url, headers=headers).json()
     t = response["currentTime"]
     return t
 
