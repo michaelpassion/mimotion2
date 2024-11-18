@@ -225,7 +225,7 @@ def main(_user, _passwd, min_1, max_1):
 #     t = str(response['unixtime'])+'000'
 #     return t
     
-def get_time(self):
+def get_time():
     url = "https://f.m.suning.com/api/ct.do"
     response = requests.get(url, headers=self.headers).json()
     t = response["currentTime"]
